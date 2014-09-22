@@ -95,6 +95,10 @@ Spree::Core::Engine.add_routes do
 
     resources :users do
       resources :credit_cards, only: [:index]
+      # resources :items, controller:  only: [:index]
+      member do
+        get :items
+      end
     end
 
     resources :properties
